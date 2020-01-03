@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",function(){
  
     document.querySelector("#new-task").onsubmit = () => {
 
+        if(document.querySelector('#task').value != ""){
         //create new item for list
         const li = document.createElement('li');
         li.innerHTML = document.querySelector('#task').value;
@@ -14,5 +15,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
         //stop form for submitting
         return false;
-       }   
+       }  
+    } 
 })
